@@ -1,1 +1,8 @@
 c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\bin\Debug\package-loader.exe.config
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\obj\Debug\package-loader.csprojResolveAssemblyReference.cache
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\bin\Debug\package-loader.exe
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\bin\Debug\package-loader.pdb
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\bin\Debug\log4net.dll
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\bin\Debug\log4net.xml
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\obj\Debug\package-loader.exe
+c:\users\ah71849\documents\visual studio 2015\Projects\package-loader\package-loader\obj\Debug\package-loader.pdb

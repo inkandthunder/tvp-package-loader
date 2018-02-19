@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"C:\Users\ah71849\Documents\Visual Studio 2015\Projects\package-loader\package-loader\test\PH0472C5_AS-B8B6B3001CFF.xml"</StartArguments>
+  </PropertyGroup>
+</Project>
