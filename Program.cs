@@ -24,22 +24,20 @@ namespace package_loader
                 if (extension.ToLower() == "xml")
                 {
                     log.Info("Begin processing on " + args[0]);
-                    Console.WriteLine("Valid Xml File");
+                    ReadXml(xmlfile);
                 }
                 else
                 {
                     log.Debug("Invalid filetype. Please pass an XML file");
-                    Console.WriteLine("Invalid file,Please Pass xml file");
                 }
-
                 Console.ReadKey();
             }
 
         }
 
-        //static void ReadXml()
-        //{
+        static void ReadXml(string xml)
+        {
 
-        //}
+        }
     }
 }
