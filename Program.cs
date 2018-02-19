@@ -64,7 +64,6 @@ namespace package_loader
         static void DataLoader(Job job)
         {
             string cs = ReadSetting("cs");
-
             DataTable tvp_packageattributes = CreateTable();
 
             // Add New Rows to table
@@ -83,22 +82,28 @@ namespace package_loader
             }
             catch (Exception ex)
             {
-                log.Error("Error parsing XML data", ex);
+                log.Error("Error parsing XML data to table-value parameter", ex);
             }
 
             try
             {
                 using (SqlConnection db = new SqlConnection(cs))
                 {
+                    //Open connection
                     db.Open();
-                    SqlCommand cmd = new SqlCommand("dbo.usp_PackageAttributeUpdate", db);
+                    SqlCommand cmd = new SqlCommand("usp_PackageAttributeUpdate", db);
                     cmd.CommandType = CommandType.StoredProcedure;
-
-                    //Pass tbv to stored procedure
                     cmd.Parameters.Add("@updatedPacks", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+                    //Pass data/tvp to stored procedure
                     SqlParameter sqlParam = cmd.Parameters.AddWithValue("@packages", tvp_packageattributes);
                     sqlParam.SqlDbType = SqlDbType.Structured;
+                    cmd.Parameters.Add(sqlParam);
+
+                    //Execute
                     cmd.ExecuteNonQuery();
+
+                    //Close connection
                     db.Close();
                     log.Info("Data Save Successfully.");
                 }
@@ -111,7 +116,6 @@ namespace package_loader
             {
                 log.Error(ex);
             }
-
         }
 
         static DataTable CreateTable()
@@ -143,8 +147,5 @@ namespace package_loader
                 return null;
             }
         }
-
-
-
     }
 }
