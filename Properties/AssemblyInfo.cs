@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("package-loader")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Aon")]
+[assembly: AssemblyCompany("Scott DeHaan)]
 [assembly: AssemblyProduct("package-loader")]
-[assembly: AssemblyCopyright("Copyright © Aon 2018")]
+[assembly: AssemblyCopyright("Copyright © Scott DeHaan 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
