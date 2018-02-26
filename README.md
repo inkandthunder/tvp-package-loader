@@ -1,6 +1,6 @@
 ## tvp-package-loader: A XML Deserializer and TVP SQL Loader for custom reporting and analytics
 
-[Travis Build Status](https://travis-ci.org/inkandthunder/tvp-package-loader.svg?branch=master)
+![Travis Build Status](https://travis-ci.org/inkandthunder/tvp-package-loader.svg?branch=master)
 [![Build status](https://ci.appveyor.com/api/projects/status/mv2bxq88ikpsjttx?svg=true)](https://ci.appveyor.com/project/inkandthunder/tvp-package-loader)
 
 ## About
