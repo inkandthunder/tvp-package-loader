@@ -1,11 +1,7 @@
-# tvp-package-loader
+## tvp-package-loader: A XML Deserializer and TVP SQL Loader for custom reporting and analytics
 
-## Status
-|System|Status|
-|--|--|
-|Appveyor|[![Build status](https://ci.appveyor.com/api/projects/status/mv2bxq88ikpsjttx?svg=true)](https://ci.appveyor.com/project/inkandthunder/tvp-package-loader)|
-|Travis|![Travis Build Status](https://travis-ci.org/inkandthunder/tvp-package-loader.svg?branch=master)|
+[Travis Build Status](https://travis-ci.org/inkandthunder/tvp-package-loader.svg?branch=master)
+[![Build status](https://ci.appveyor.com/api/projects/status/mv2bxq88ikpsjttx?svg=true)](https://ci.appveyor.com/project/inkandthunder/tvp-package-loader)
 
-## Getting Started
-TODO
-
+## About
+This is a custom application that I wrote to integrate a data feed from a third party application (Quadient Inspire) with the backend of a custom reporting and management tool.  It was my first exposure with batch updating a database from a data table, which was done (as opposed to iterating the data updates) to optimize performance and minimize database cursors. 
