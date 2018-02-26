@@ -39,7 +39,6 @@ namespace package_loader
                 {
                     log.Debug("Invalid filetype. Please pass an XML file");
                 }
-                Console.ReadKey();
             }
         }
 
@@ -87,26 +86,17 @@ namespace package_loader
 
             try
             {
-                using (SqlConnection db = new SqlConnection(cs))
-                {
-                    //Open connection
-                    db.Open();
-                    SqlCommand cmd = new SqlCommand("usp_PackageAttributeUpdate", db);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@updatedPacks", SqlDbType.Int).Direction = ParameterDirection.Output;
-
-                    //Pass data/tvp to stored procedure
-                    SqlParameter sqlParam = cmd.Parameters.AddWithValue("@packages", tvp_packageattributes);
-                    sqlParam.SqlDbType = SqlDbType.Structured;
-                    cmd.Parameters.Add(sqlParam);
-
-                    //Execute
-                    cmd.ExecuteNonQuery();
-
-                    //Close connection
-                    db.Close();
-                    log.Info("Data Save Successfully.");
-                }
+                SqlCommand command = new SqlCommand("dbo.usp_PackageAttributeUpdate", new SqlConnection(cs));
+                command.CommandType = CommandType.StoredProcedure;
+                SqlParameter tvp = command.Parameters.AddWithValue("@tvp_packages", tvp_packageattributes);
+                tvp.SqlDbType = SqlDbType.Structured;
+                SqlParameter outParam = command.Parameters.Add("@updatedPacks", SqlDbType.Int);
+                outParam.Direction = ParameterDirection.Output;
+                command.Connection.Open();
+                int affected = command.ExecuteNonQuery();
+                command.Connection.Close();
+                Console.WriteLine(affected);
+                log.Info("Data Saved Successfully.");
             }
             catch (SqlException se)
             {
