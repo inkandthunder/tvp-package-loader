@@ -1,1 +1,2 @@
 language: csharp
+solution: package-loader.sln
